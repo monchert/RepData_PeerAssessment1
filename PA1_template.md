@@ -152,7 +152,7 @@ library(plyr)
 data <- ddply(df, .(interval, wend), summarise, mean=mean(steps))
 
 library(lattice)
-xyplot(mean ~ interval | wend, data=data, type="l", ylab = "Number of steps")
+xyplot(mean ~ interval | wend, data=data, type="l", ylab = "Number of steps", layout=c(1,2))
 ```
 
 ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
